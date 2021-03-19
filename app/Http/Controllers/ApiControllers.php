@@ -27,16 +27,14 @@ abstract class ApiControllers  extends Controller
     }
 
     public function get(){
-        $limit=(int)$this->request->get('limit',20);
-        $offset=(int) $this->request->get('offset',0);
-        $result= $this->model->limit($limit)->offset($offset)->get();
+        $result= $this->model->get();
         return $this->sendResponse($result,'OK',200);
 
     }
 
 
     public function detail(int $entityId){
-
+        // return  $this->sendResponse($entityId,'OK',200)
 
         $entity=$this->model->find($entityId);
         if(is_null($entity)) {

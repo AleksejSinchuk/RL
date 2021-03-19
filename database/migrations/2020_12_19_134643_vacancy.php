@@ -16,7 +16,7 @@ class Vacancy extends Migration
         Schema::create('vacancies', function (Blueprint $table) {
             $table->id();
             $table->string('email');
-            $table->string('description');
+            $table->text('description');
             $table->integer('idUser');
             $table->integer('idTest');
             $table->date('date');

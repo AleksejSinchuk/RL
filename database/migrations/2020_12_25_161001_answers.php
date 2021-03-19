@@ -16,7 +16,7 @@ class Answers extends Migration
         Schema::create('answers', function (Blueprint $table) {
             $table->id();
             $table->integer('question_id');
-            $table->string('answer');
+            $table->text('answer');
             $table->boolean('is_true');
 
         });

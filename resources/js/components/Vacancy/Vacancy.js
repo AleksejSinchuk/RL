@@ -2,25 +2,30 @@ import React, {Component} from 'react';
 import {NavLink} from "react-router-dom";
 import VacancyItem from "./VacancyItem";
 
-export default class All extends Component {
+export default class Vacancy extends Component {
 
 
 
     constructor(props){
         super(props);
         this.state = {
+            vac : '',
             isLoaded: false,
             isErr: false,
-            items: []
+            id: this.props.location.pathname.split('/')[2]
         }
+        console.log("id " + this.state.id)
+
     }
 
 
     componentDidMount() {
-        fetch("/api/v1/vacancy")
+        fetch("/api/v1/vacancy/"+this.state.id)
             .then(res => res.json())
             .then(
                 (result) => {
+                    console.log("then: ");
+                    console.log(result);
                     if (!result.success) {
                         this.setState({
                             isErr: true,
@@ -30,7 +35,7 @@ export default class All extends Component {
                     else {
                         this.setState({
                             isLoaded: true,
-                            items: result.data[0]
+                            vac: result.data
                         });
                     }
 
@@ -48,14 +53,16 @@ export default class All extends Component {
     render(){
         if (!this.state.isLoaded) return (<div> Loading </div>);
         if (this.state.isErr) return (<div> IsError</div>);
-        if (this.state.items[0] === undefined) return (<div> undefined</div>);
+        if (this.state.vac[0] === undefined) return (<div> undefined</div>);
+        let v = this.state.vac[0];
         return (
-            <div >
-                { this.state.items.map(item => (
-                    <VacancyItem vac={item}></VacancyItem>
-                ))}
-            </div>
-        );
+            <div className="container ">
+                <div>
+                        <div> {v.description}</div>
+                        <div> {v.date}</div>
+                        <div ><NavLink to={`/test/${v.idTest}`} className="btn btn-info">LinkToTest</NavLink></div>
+                </div>
+            </div>);
     }
 
 

@@ -16,7 +16,7 @@ class Questions extends Migration
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
             $table->integer('test_id');
-            $table->string('question');
+            $table->text('question');
             $table->integer('type');
 
         });

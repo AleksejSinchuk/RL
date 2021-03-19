@@ -1,50 +1,62 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import "bootstrap/dist/css/bootstrap.css"
+import Login from "../Registr/Login";
+import Cookies from "js-cookie";
 
 /* An example React component */
 class Header extends Component {
-    render() {
+
+    isLogin(){
         return (
-            <div>
+            <div className="header">
                 <div className="navbar navbar-light ">
                     <div className="container-fluid">
                         <nav className="nav">
-                        <a className="nav-link" href="/">Домашня</a>
-                        <a className="nav-link" href="/">Про нас</a>
-                        <a className="nav-link" href="/">Партнери</a>
+                            <a className="nav-link" href="/">Домашняя</a>
+                            <a className="nav-link" href="/">О нас</a>
+                            <a className="nav-link" href="/">Партнери</a>
+                            <a className="nav-link" href="/vacancy">Вакансии</a>
+                            <a className="nav-link" href="/office">Личный кабинет</a>
                         </nav>
                         <div className="form">
-
-                            <form className="form-horizontal" role="form" method="POST">
-                                <div className="form-group">
-                                    <div className="form-group">
-                                        <div className="col-sm-10">
-                                            <input type="text" className="form-control" placeholder="Логин"
-                                                   name="login"></input>
-                                        </div>
-                                    </div>
-
-                                    <div className="form-group">
-                                        <div className="col-sm-10">
-                                            <input type="password" className="form-control" placeholder="Пароль"
-                                                   name="password"></input>
-                                        </div>
-                                    </div>
-                                    <div className="form-group">
-                                        <div className="col-sm-offset-2 col-sm-10">
-                                            <button type="submit" className="btn btn-default btn-sm">Войти</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
+                            <Login/>
                         </div>
                     </div>
                 </div>
             </div>
-
-    );
+        );
     }
+
+    isLogOut(){
+        return (
+            <div className="header">
+                <div className="navbar navbar-light ">
+                    <div className="container-fluid">
+                        <nav className="nav">
+                            <a className="nav-link" href="/">Домашняя</a>
+                            <a className="nav-link" href="/">О нас</a>
+                            <a className="nav-link" href="/">Партнери</a>
+                        </nav>
+                        <div className="form">
+                            <Login/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+
+    render() {
+        if(Cookies.get('isLogin')==="1")
+        return this.isLogin();
+        return  this.isLogOut();
+
+    }
+
+
+
+
 }
 
 export default Header;

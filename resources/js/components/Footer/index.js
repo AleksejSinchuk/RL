@@ -5,11 +5,11 @@ import ReactDOM from 'react-dom';
 class Footer extends Component {
     render() {
         return (
-            <div>
+
+            <div className="footer" >
                 <nav className="nav">
-                    <a className="nav-link" href="/">Про нас</a>
-                    <a className="nav-link" href="/">Партнери</a>
-                    <a className="nav-link" href="/">Допомога</a>
+                    <a className="nav-link" href="/">О нас</a>
+                    <a className="nav-link" href="/">Партнеры</a>
                 </nav>
             </div>
         );
