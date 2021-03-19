@@ -13,11 +13,11 @@ class Header extends Component {
                 <div className="navbar navbar-light ">
                     <div className="container-fluid">
                         <nav className="nav">
-                            <a className="nav-link" href="/">Домашняя</a>
-                            <a className="nav-link" href="/">О нас</a>
-                            <a className="nav-link" href="/">Партнери</a>
-                            <a className="nav-link" href="/vacancy">Вакансии</a>
-                            <a className="nav-link" href="/office">Личный кабинет</a>
+                            <a className="nav-link btn btn-primary m-lg-3" href="/">Домашняя</a>
+                            <a className="nav-link btn btn-primary m-lg-3" href="/">О нас</a>
+                            <a className="nav-link btn btn-primary m-lg-3" href="/">Партнери</a>
+                            <a className="nav-link btn btn-primary m-lg-3" href="/vacancy">Вакансии</a>
+                            <a className="nav-link btn btn-primary m-lg-3" href="/office">Личный кабинет</a>
                         </nav>
                         <div className="form">
                             <Login/>
@@ -34,9 +34,9 @@ class Header extends Component {
                 <div className="navbar navbar-light ">
                     <div className="container-fluid">
                         <nav className="nav">
-                            <a className="nav-link" href="/">Домашняя</a>
-                            <a className="nav-link" href="/">О нас</a>
-                            <a className="nav-link" href="/">Партнери</a>
+                            <a className="nav-link btn btn-primary m-lg-3" href="/">Домашняя</a>
+                            <a className="nav-link btn btn-primary m-lg-3" href="/">О нас</a>
+                            <a className="nav-link btn btn-primary m-lg-3" href="/">Партнери</a>
                         </nav>
                         <div className="form">
                             <Login/>

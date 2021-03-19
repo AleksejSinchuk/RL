@@ -57,7 +57,7 @@ countTests(){
 
                        {this.countTests()}
 
-                       <input type="button" value="CreateTestComponent" onClick={this.plusComponent}/>
+                       <input type="button" value="CreateTestComponent" className="btn btn-primary" onClick={this.plusComponent}/>
                    </form>
                </div>
            ) ;

@@ -55,14 +55,23 @@ export default class RegistrForm extends Component {
 
     renderForm() {
         return (
-            <div>
-                <form>
-                    <input type="text" placeholder="name" name="name" value={this.state.name} onChange={this.onChange}/>
-                    <input type="email" placeholder="email" name="email" value={this.state.email} onChange={this.onChange}/>
-                    <input type="password" placeholder="password" name="password" value={this.state.password} onChange={this.onChange}/>
-                    <input type="button" value="Login" onClick={this.createUser}/>
+            <div className="container ">
+                <form className="h-50">
+                    <div className="mb-3">
+                    <input type="text" placeholder="name" className="form-control" name="name" value={this.state.name} onChange={this.onChange}/>
+                    </div>
+                    <div className="mb-3">
+                    <input type="email" placeholder="email" className="form-control" name="email" value={this.state.email} onChange={this.onChange}/>
+                    </div>
+                    <div className="mb-3">
+                    <input type="password" placeholder="password" className="form-control" name="password" value={this.state.password} onChange={this.onChange}/>
+                    </div>
+                    <input type="button" className="btn btn-primary" value="Registration" onClick={this.createUser}/>
                 </form>
             </div>
+
+
+
         )
     }
 

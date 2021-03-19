@@ -85,8 +85,12 @@ export default class Login extends Component {
         return(
             <div>
                 <form>
-                   <div>Привет {Cookies.get('name')}</div>
-                    <div><input type="button" value="Logout" onClick={this.doLogOut}/></div>
+                   <div>
+                       <blockquote className="blockquote">
+                      <p>{Cookies.get('name')}</p>
+                       </blockquote>
+                   </div>
+                    <div><input type="button" value="Logout" className="btn btn-primary" onClick={this.doLogOut}/></div>
                 </form>
             </div>
         )
@@ -96,9 +100,17 @@ export default class Login extends Component {
         return (
             <div>
                 <form>
-                    <input type="email" placeholder="email" name="email" value={this.state.email} onChange={this.onChange}/>
-                    <input type="password" placeholder="password" name="password" value={this.state.password} onChange={this.onChange}/>
-                    <input type="button" value="Login" onClick={this.doLogin}/>
+                    <div className="mb-3">
+                    <input type="email" className="form-control" placeholder="email" name="email" value={this.state.email} onChange={this.onChange}/>
+                    </div>
+                    <div className="mb-3">
+                    <input type="password" className="form-control" placeholder="password" name="password" value={this.state.password} onChange={this.onChange}/>
+                    </div>
+                   <div>
+                       <input type="button" className="btn btn-primary" value="Login" onClick={this.doLogin}/>
+                       <a className="nav-link" className="p-lg-0 m-lg-5" href="/registr">Регистрация</a>
+                   </div>
+
                 </form>
             </div>
         )

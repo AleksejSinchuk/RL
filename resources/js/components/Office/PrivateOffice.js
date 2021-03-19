@@ -38,7 +38,7 @@ export default class PrivateOffice extends Component {
         return (
             <div>
 
-                <div> <input type="button" value="CreateVacancy" onClick={this.getVacForm}/></div>
+                <div> <input type="button" value="CreateVacancy" className="btn btn-primary" onClick={this.getVacForm}/></div>
             </div>
         );
     }
@@ -50,7 +50,7 @@ export default class PrivateOffice extends Component {
             <div>
                 <form>
                     <CreateVacancy />
-                    <div> <input type="button" value="SaveVacancy" onClick={this.saveVacancy}/></div>
+                    <div> <input type="button" value="SaveVacancy" className="btn btn-primary" onClick={this.saveVacancy}/></div>
 
                 </form>
 

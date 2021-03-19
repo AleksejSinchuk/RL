@@ -2356,23 +2356,23 @@ var Header = /*#__PURE__*/function (_Component) {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("nav", {
               className: "nav",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
-                className: "nav-link",
+                className: "nav-link btn btn-primary m-lg-3",
                 href: "/",
                 children: "\u0414\u043E\u043C\u0430\u0448\u043D\u044F\u044F"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
-                className: "nav-link",
+                className: "nav-link btn btn-primary m-lg-3",
                 href: "/",
                 children: "\u041E \u043D\u0430\u0441"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
-                className: "nav-link",
+                className: "nav-link btn btn-primary m-lg-3",
                 href: "/",
                 children: "\u041F\u0430\u0440\u0442\u043D\u0435\u0440\u0438"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
-                className: "nav-link",
+                className: "nav-link btn btn-primary m-lg-3",
                 href: "/vacancy",
                 children: "\u0412\u0430\u043A\u0430\u043D\u0441\u0438\u0438"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
-                className: "nav-link",
+                className: "nav-link btn btn-primary m-lg-3",
                 href: "/office",
                 children: "\u041B\u0438\u0447\u043D\u044B\u0439 \u043A\u0430\u0431\u0438\u043D\u0435\u0442"
               })]
@@ -2396,15 +2396,15 @@ var Header = /*#__PURE__*/function (_Component) {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("nav", {
               className: "nav",
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
-                className: "nav-link",
+                className: "nav-link btn btn-primary m-lg-3",
                 href: "/",
                 children: "\u0414\u043E\u043C\u0430\u0448\u043D\u044F\u044F"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
-                className: "nav-link",
+                className: "nav-link btn btn-primary m-lg-3",
                 href: "/",
                 children: "\u041E \u043D\u0430\u0441"
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
-                className: "nav-link",
+                className: "nav-link btn btn-primary m-lg-3",
                 href: "/",
                 children: "\u041F\u0430\u0440\u0442\u043D\u0435\u0440\u0438"
               })]
@@ -2636,6 +2636,7 @@ var CreateVacancy = /*#__PURE__*/function (_Component) {
           }), this.countTests(), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
             type: "button",
             value: "CreateTestComponent",
+            className: "btn btn-primary",
             onClick: this.plusComponent
           })]
         })
@@ -2735,6 +2736,7 @@ var PrivateOffice = /*#__PURE__*/function (_Component) {
           children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
             type: "button",
             value: "CreateVacancy",
+            className: "btn btn-primary",
             onClick: this.getVacForm
           })]
         })
@@ -2749,6 +2751,7 @@ var PrivateOffice = /*#__PURE__*/function (_Component) {
             children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
               type: "button",
               value: "SaveVacancy",
+              className: "btn btn-primary",
               onClick: this.saveVacancy
             })]
           })]
@@ -2896,12 +2899,18 @@ var Login = /*#__PURE__*/function (_Component) {
     value: function renderFormLogout() {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("form", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            children: ["\u041F\u0440\u0438\u0432\u0435\u0442 ", js_cookie__WEBPACK_IMPORTED_MODULE_1___default().get('name')]
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("blockquote", {
+              className: "blockquote",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+                children: js_cookie__WEBPACK_IMPORTED_MODULE_1___default().get('name')
+              })
+            })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
               type: "button",
               value: "Logout",
+              className: "btn btn-primary",
               onClick: this.doLogOut
             })
           })]
@@ -2911,24 +2920,39 @@ var Login = /*#__PURE__*/function (_Component) {
   }, {
     key: "renderForm",
     value: function renderForm() {
+      var _jsx2;
+
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("form", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
-            type: "email",
-            placeholder: "email",
-            name: "email",
-            value: this.state.email,
-            onChange: this.onChange
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
-            type: "password",
-            placeholder: "password",
-            name: "password",
-            value: this.state.password,
-            onChange: this.onChange
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
-            type: "button",
-            value: "Login",
-            onClick: this.doLogin
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "mb-3",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+              type: "email",
+              className: "form-control",
+              placeholder: "email",
+              name: "email",
+              value: this.state.email,
+              onChange: this.onChange
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "mb-3",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+              type: "password",
+              className: "form-control",
+              placeholder: "password",
+              name: "password",
+              value: this.state.password,
+              onChange: this.onChange
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+              type: "button",
+              className: "btn btn-primary",
+              value: "Login",
+              onClick: this.doLogin
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", (_jsx2 = {
+              className: "nav-link"
+            }, _defineProperty(_jsx2, "className", "p-lg-0 m-lg-5"), _defineProperty(_jsx2, "href", "/registr"), _defineProperty(_jsx2, "children", "\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044F"), _jsx2))]
           })]
         })
       });
@@ -3044,28 +3068,43 @@ var RegistrForm = /*#__PURE__*/function (_Component) {
     key: "renderForm",
     value: function renderForm() {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "container ",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("form", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-            type: "text",
-            placeholder: "name",
-            name: "name",
-            value: this.state.name,
-            onChange: this.onChange
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-            type: "email",
-            placeholder: "email",
-            name: "email",
-            value: this.state.email,
-            onChange: this.onChange
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-            type: "password",
-            placeholder: "password",
-            name: "password",
-            value: this.state.password,
-            onChange: this.onChange
+          className: "h-50",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            className: "mb-3",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+              type: "text",
+              placeholder: "name",
+              className: "form-control",
+              name: "name",
+              value: this.state.name,
+              onChange: this.onChange
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            className: "mb-3",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+              type: "email",
+              placeholder: "email",
+              className: "form-control",
+              name: "email",
+              value: this.state.email,
+              onChange: this.onChange
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            className: "mb-3",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+              type: "password",
+              placeholder: "password",
+              className: "form-control",
+              name: "password",
+              value: this.state.password,
+              onChange: this.onChange
+            })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
             type: "button",
-            value: "Login",
+            className: "btn btn-primary",
+            value: "Registration",
             onClick: this.createUser
           })]
         })
@@ -3701,24 +3740,28 @@ var VacancyItem = /*#__PURE__*/function (_Component) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        className: "row justify-content-center h-75 pt-5",
+        className: "container",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          className: " bg-light border-dark border-5 ",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-            className: " text-center h-auto border-dark border-5 p-4",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-              children: [" ", this.props.vac.description]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-              children: [" ", this.props.vac.date]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.NavLink, {
-                to: "/vacancy/".concat(this.props.vac.id),
-                className: "btn btn-info",
-                children: "LinkToVacancy"
-              })
-            })]
-          })
-        }, this.props.vac.id)
+          className: "alert alert-dark",
+          role: "alert",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            className: " bg-light border-dark border-5 ",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+              className: " text-center h-auto border-dark border-5 p-4",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                children: [" ", this.props.vac.description]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                children: [" ", this.props.vac.date]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.NavLink, {
+                  to: "/vacancy/".concat(this.props.vac.id),
+                  className: "btn btn-info",
+                  children: "LinkToVacancy"
+                })
+              })]
+            })
+          }, this.props.vac.id)
+        })
       });
     }
   }]);
