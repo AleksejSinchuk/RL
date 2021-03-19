@@ -54,10 +54,14 @@ export default class Vacancy extends Component {
         if (!this.state.isLoaded) return (<div> Loading </div>);
         if (this.state.isErr) return (<div> IsError</div>);
         if (this.state.vac[0] === undefined) return (<div> undefined</div>);
+        // if(Cookies.get('isLogin')!=='1'){
+        //     window.location='/'
+        //     return ""
+        // }
         let v = this.state.vac[0];
         return (
             <div className="container ">
-                <div>
+                <div className="alert alert-dark" role="alert">
                         <div> {v.description}</div>
                         <div> {v.date}</div>
                         <div ><NavLink to={`/test/${v.idTest}`} className="btn btn-info">LinkToTest</NavLink></div>

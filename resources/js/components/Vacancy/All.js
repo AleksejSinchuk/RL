@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {NavLink} from "react-router-dom";
 import VacancyItem from "./VacancyItem";
+import Cookies from "js-cookie";
 
 export default class All extends Component {
 
@@ -49,6 +50,11 @@ export default class All extends Component {
         if (!this.state.isLoaded) return (<div> Loading </div>);
         if (this.state.isErr) return (<div> IsError</div>);
         if (this.state.items[0] === undefined) return (<div> undefined</div>);
+            // if(Cookies.get('isLogin')!=='1'){
+            //     window.location='/'
+            //     return ""
+            // }
+
         return (
             <div >
                 { this.state.items.map(item => (

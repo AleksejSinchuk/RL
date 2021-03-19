@@ -8,24 +8,43 @@ export default class CreateTest extends Component {
 
         }
 
-
     }
 
     render() {
         return(
-            <div>
-                  <div><label>Question</label></div>
-                    <div><label>Answer <input className="form-check-input" type="checkbox"/></label></div>
-                    <div><label>Answer <input className="form-check-input" type="checkbox"/></label></div>
-                    <div><label>Answer <input className="form-check-input" type="checkbox"/></label></div>
-                    <div><label>Answer <input className="form-check-input" type="checkbox"/></label></div>
-            </div>
-        ) ;
+        <div className="row g-3 align-items-center pt-5">
+              <div className="col-auto">
+                  <input type="text" id="" className="form-control" placeholder="Question" />
+              </div>
+
+                <div className="col-auto">
+                    <input type="text" id="" className="form-control" placeholder="Answer" />
+                    <input type="text" id="" className="form-control" placeholder="Answer" />
+                    <input type="text" id="" className="form-control" placeholder="Answer" />
+                    <input type="text" id="" className="form-control" placeholder="Answer" />
+                </div>
+
+                <div className="col-auto">
+                        <div >
+                            <input className="" type="checkbox"/>
+                        </div>
+                        <div>
+                            <input className="" type="checkbox"/>
+                        </div>
+                        <div>
+                            <input className="" type="checkbox"/>
+                        </div>
+                    <div>
+                        <input className="" type="checkbox"/>
+                    </div>
+                </div>
 
 
+        </div>
+        );
     }
 
-//===============================================================================
+
 
 }
 

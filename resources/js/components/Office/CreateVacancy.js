@@ -52,12 +52,15 @@ countTests(){
     render() {
        return(
                <div>
-                   <form>
-                       <input typeof="text" name="description"/>
 
+                        <form>
+                            <div className='container'>
+                       <input typeof="text" className="form-control" name="description" placeholder="description"/>
+                       </div>
                        {this.countTests()}
 
-                       <input type="button" value="CreateTestComponent" className="btn btn-primary" onClick={this.plusComponent}/>
+                       <input type="button" value="CreateTestComponent" className="btn btn-primary mt-5" onClick={this.plusComponent}/>
+
                    </form>
                </div>
            ) ;

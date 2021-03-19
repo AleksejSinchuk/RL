@@ -39,7 +39,7 @@ export default class Login extends Component {
                 console.log("Then response: ");
                 console.log(response.data);
                 Cookies.set('isLogin', "1");
-                    console.log("doLogin: "+ Cookies.get('isLogin'))
+
                 Cookies.set('name', response.data.name);
                 Cookies.set('access_token', response.data.access_token);
                 this.setState({isLogin: "1"})

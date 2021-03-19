@@ -2489,42 +2489,64 @@ var CreateTest = /*#__PURE__*/function (_Component) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: "row g-3 align-items-center pt-5",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("label", {
-            children: "Question"
+          className: "col-auto",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+            type: "text",
+            id: "",
+            className: "form-control",
+            placeholder: "Question"
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
-            children: ["Answer ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-              className: "form-check-input",
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "col-auto",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+            type: "text",
+            id: "",
+            className: "form-control",
+            placeholder: "Answer"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+            type: "text",
+            id: "",
+            className: "form-control",
+            placeholder: "Answer"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+            type: "text",
+            id: "",
+            className: "form-control",
+            placeholder: "Answer"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+            type: "text",
+            id: "",
+            className: "form-control",
+            placeholder: "Answer"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "col-auto",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+              className: "",
               type: "checkbox"
-            })]
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
-            children: ["Answer ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-              className: "form-check-input",
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+              className: "",
               type: "checkbox"
-            })]
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
-            children: ["Answer ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-              className: "form-check-input",
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+              className: "",
               type: "checkbox"
-            })]
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("label", {
-            children: ["Answer ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-              className: "form-check-input",
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+              className: "",
               type: "checkbox"
-            })]
-          })
+            })
+          })]
         })]
       });
-    } //===============================================================================
-
+    }
   }]);
 
   return CreateTest;
@@ -2630,13 +2652,18 @@ var CreateVacancy = /*#__PURE__*/function (_Component) {
     value: function render() {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("form", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
-            "typeof": "text",
-            name: "description"
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "container",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+              "typeof": "text",
+              className: "form-control",
+              name: "description",
+              placeholder: "description"
+            })
           }), this.countTests(), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
             type: "button",
             value: "CreateTestComponent",
-            className: "btn btn-primary",
+            className: "btn btn-primary mt-5",
             onClick: this.plusComponent
           })]
         })
@@ -2724,6 +2751,10 @@ var PrivateOffice = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      // if(Cookies.get('isLogin')!=='1'){
+      //     window.location='/'
+      //     return ""
+      // }
       if (this.state.isTest === "2") return this.doVacForm();
       return this.renderOffice();
     } //===============================================================================
@@ -2747,13 +2778,14 @@ var PrivateOffice = /*#__PURE__*/function (_Component) {
     value: function doVacForm() {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("form", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_CreateVacancy__WEBPACK_IMPORTED_MODULE_1__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_CreateVacancy__WEBPACK_IMPORTED_MODULE_1__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "pt-5",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
               type: "button",
               value: "SaveVacancy",
               className: "btn btn-primary",
               onClick: this.saveVacancy
-            })]
+            })
           })]
         })
       });
@@ -2856,7 +2888,6 @@ var Login = /*#__PURE__*/function (_Component) {
         console.log("Then response: ");
         console.log(response.data);
         js_cookie__WEBPACK_IMPORTED_MODULE_1___default().set('isLogin', "1");
-        console.log("doLogin: " + js_cookie__WEBPACK_IMPORTED_MODULE_1___default().get('isLogin'));
         js_cookie__WEBPACK_IMPORTED_MODULE_1___default().set('name', response.data.name);
         js_cookie__WEBPACK_IMPORTED_MODULE_1___default().set('access_token', response.data.access_token);
 
@@ -3387,6 +3418,10 @@ var Test = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
+      // if(Cookies.get('isLogin')!=='1'){
+      //     window.location='/'
+      //     return ""
+      // }
       if (!this.state.isLoaded) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         children: " Loading "
       });
@@ -3420,6 +3455,7 @@ var Test = /*#__PURE__*/function (_Component) {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
             type: "button",
             value: "SendTest",
+            className: "btn btn-primary",
             onClick: this.sendTest
           })]
         })
@@ -3450,7 +3486,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _VacancyItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./VacancyItem */ "./resources/js/components/Vacancy/VacancyItem.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! js-cookie */ "./node_modules/js-cookie/src/js.cookie.js");
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -3472,6 +3510,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
 
 
 
@@ -3526,18 +3565,22 @@ var All = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      if (!this.state.isLoaded) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      if (!this.state.isLoaded) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         children: " Loading "
       });
-      if (this.state.isErr) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      if (this.state.isErr) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         children: " IsError"
       });
-      if (this.state.items[0] === undefined) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      if (this.state.items[0] === undefined) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         children: " undefined"
-      });
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      }); // if(Cookies.get('isLogin')!=='1'){
+      //     window.location='/'
+      //     return ""
+      // }
+
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         children: this.state.items.map(function (item) {
-          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_VacancyItem__WEBPACK_IMPORTED_MODULE_1__.default, {
+          return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_VacancyItem__WEBPACK_IMPORTED_MODULE_1__.default, {
             vac: item
           });
         })
@@ -3656,11 +3699,17 @@ var Vacancy = /*#__PURE__*/function (_Component) {
       });
       if (this.state.vac[0] === undefined) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
         children: " undefined"
-      });
+      }); // if(Cookies.get('isLogin')!=='1'){
+      //     window.location='/'
+      //     return ""
+      // }
+
       var v = this.state.vac[0];
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
         className: "container ",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "alert alert-dark",
+          role: "alert",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
             children: [" ", v.description]
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
@@ -8334,7 +8383,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n    font: 11pt Arial, Helvetica, sans-serif; /* Рубленый шрифт текста */\n    margin: 0; /* Отступы на странице */\n    /* background: #7f152e;*/\n }\n .header { /* Верхний блок */\n    background: #d61800; /* Цвет фона */\n    padding: 10px; /* Поля вокруг текста */\n}\n.filter { /* Левая колонка */\n    float: left; /* Обтекание справа */\n    background: #edae01; /* Цвет фона */\n    border: 1px solid #333; /* Параметры рамки вокруг */\n    width: 20%; /* Ширина колонки */\n    padding: 5px; /* Поля вокруг текста */\n    margin: 10px 10px 20px 5px; /* Значения отступов */\n}\n.content { /* Правая колонка */\n    background: #e94f08; /* Цвет фона */\n    padding: 5px; /* Поля вокруг текста */\n    border: 1px solid #333; /* Параметры рамки */\n}\n.footer { /* Нижний блок */\n    background: #ba5536; /* Цвет фона */\n    padding: 5px; /* Поля вокруг текста */\n    color: #fff; /* Цвет текста */\n    clear: left; /* Отменяем действие float */\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n    font: 11pt Arial, Helvetica, sans-serif; /* Рубленый шрифт текста */\n    margin: 0; /* Отступы на странице */\n    /* background: #7f152e;*/\n\n }\n .header { /* Верхний блок */\n    background: #d61800; /* Цвет фона */\n    padding: 10px; /* Поля вокруг текста */\n}\n.filter { /* Левая колонка */\n    float: left; /* Обтекание справа */\n    background: #edae01; /* Цвет фона */\n    border: 1px solid #333; /* Параметры рамки вокруг */\n    width: 20%; /* Ширина колонки */\n    padding: 5px; /* Поля вокруг текста */\n    margin: 10px 10px 20px 5px; /* Значения отступов */\n}\n.content { /* Правая колонка */\n    background: #e94f08; /* Цвет фона */\n    padding: 5px; /* Поля вокруг текста */\n    border: 1px solid #333; /* Параметры рамки */\n}\n.footer { /* Нижний блок */\n    background: #d61800; /* Цвет фона */\n    padding: 5px; /* Поля вокруг текста */\n    color: #fff; /* Цвет текста */\n    clear: left; /* Отменяем действие float */\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

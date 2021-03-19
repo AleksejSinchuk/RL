@@ -2,6 +2,7 @@ body {
     font: 11pt Arial, Helvetica, sans-serif; /* Рубленый шрифт текста */
     margin: 0; /* Отступы на странице */
     /* background: #7f152e;*/
+
  }
  .header { /* Верхний блок */
     background: #d61800; /* Цвет фона */
@@ -21,7 +22,7 @@ body {
     border: 1px solid #333; /* Параметры рамки */
 }
 .footer { /* Нижний блок */
-    background: #ba5536; /* Цвет фона */
+    background: #d61800; /* Цвет фона */
     padding: 5px; /* Поля вокруг текста */
     color: #fff; /* Цвет текста */
     clear: left; /* Отменяем действие float */

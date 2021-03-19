@@ -27,6 +27,11 @@ export default class PrivateOffice extends Component {
 
     render() {
 
+        // if(Cookies.get('isLogin')!=='1'){
+        //     window.location='/'
+        //     return ""
+        // }
+
         if(this.state.isTest==="2")
             return this.doVacForm();
             return this.renderOffice();
@@ -50,7 +55,9 @@ export default class PrivateOffice extends Component {
             <div>
                 <form>
                     <CreateVacancy />
-                    <div> <input type="button" value="SaveVacancy" className="btn btn-primary" onClick={this.saveVacancy}/></div>
+                    <div className="pt-5">
+                        <input type="button" value="SaveVacancy" className="btn btn-primary" onClick={this.saveVacancy}/>
+                    </div>
 
                 </form>
 

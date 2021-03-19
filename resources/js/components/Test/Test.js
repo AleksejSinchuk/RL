@@ -54,7 +54,10 @@ class Test extends Component {
     }
 
     render() {
-
+        // if(Cookies.get('isLogin')!=='1'){
+        //     window.location='/'
+        //     return ""
+        // }
         if (!this.state.isLoaded) return (<div> Loading </div>);
         if (this.state.isErr) return (<div> IsError</div>);
         if (this.state.test === undefined) return (<div> undefined</div>);
@@ -78,7 +81,7 @@ renderTestForm (){
                     </tbody>
 
                 </table>
-                <input type="button" value="SendTest" onClick={this.sendTest}/>
+                <input type="button" value="SendTest" className="btn btn-primary" onClick={this.sendTest}/>
             </form>
         </div>
 
