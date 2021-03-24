@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Laravel\Passport\Passport;
 
 
 class ApiUserController extends Controller
@@ -17,9 +18,9 @@ class ApiUserController extends Controller
             $users=new User();
             $users->email=$data['email'];
             $users->password=Hash::make($data['password']);
-            $users->setRememberToken($data['email']);
+            $users->remember_token=Passport::hashClientSecrets();
             $users->name=$data['name'];
-            $users->role_id=2;
+            $users->role_id=$data['role_id'];
             $users->updated_at=DB::raw(NOW());
             $users->created_at=DB::raw(NOW());
             $users->save();
@@ -36,7 +37,7 @@ class ApiUserController extends Controller
 
     public function get(){
 
-        $result=User::all();
+        $result=User::all()->whith('roles')->get();
         return $this->sendResponse($result,'OK',200);
     }
 

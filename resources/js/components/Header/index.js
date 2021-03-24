@@ -8,24 +8,13 @@ import Cookies from "js-cookie";
 class Header extends Component {
 
     isLogin(){
-        return (
-            <div className="header">
-                <div className="navbar navbar-light ">
-                    <div className="container-fluid">
-                        <nav className="nav">
-                            <a className="nav-link btn btn-primary m-lg-3" href="/">Домашняя</a>
-                            <a className="nav-link btn btn-primary m-lg-3" href="/">О нас</a>
-                            <a className="nav-link btn btn-primary m-lg-3" href="/">Партнери</a>
-                            <a className="nav-link btn btn-primary m-lg-3" href="/vacancy">Вакансии</a>
-                            <a className="nav-link btn btn-primary m-lg-3" href="/office">Личный кабинет</a>
-                        </nav>
-                        <div className="form">
-                            <Login/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
+        if(Cookies.get('role_id')=== '3') {
+            return (<a className="nav-link btn btn-primary m-lg-3" href="/office">Личный кабинет</a>);
+        }
+        if(Cookies.get('role_id')=== '2')
+        return (<a className="nav-link btn btn-primary m-lg-3" href="/vacancy">Вакансии</a>);
+
+        return "";
     }
 
     isLogOut(){
@@ -37,6 +26,7 @@ class Header extends Component {
                             <a className="nav-link btn btn-primary m-lg-3" href="/">Домашняя</a>
                             <a className="nav-link btn btn-primary m-lg-3" href="/">О нас</a>
                             <a className="nav-link btn btn-primary m-lg-3" href="/">Партнери</a>
+                            {this.isLogin()}
                         </nav>
                         <div className="form">
                             <Login/>
@@ -48,8 +38,7 @@ class Header extends Component {
     }
 
     render() {
-        if(Cookies.get('isLogin')==="1")
-        return this.isLogin();
+
         return  this.isLogOut();
 
     }

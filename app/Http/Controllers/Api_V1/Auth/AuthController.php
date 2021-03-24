@@ -22,7 +22,11 @@ class AuthController extends Controller
             return response(['status'=> false, 'message'=>'Invalid email or pswd'], 403);
         }
         // 'user_name' => Auth::user()->name
-        return response(['status'=> true, 'access_token' => Auth::user()->getRememberToken(), 'name' =>  Auth::user()->name], 200);
+        return response(['status'=> true,
+                        'access_token' => Auth::user()->getRememberToken(),
+                        'name' =>  Auth::user()->name,
+                        'role_id'=>Auth::user()->role_id],
+                     200);
     }
 
 

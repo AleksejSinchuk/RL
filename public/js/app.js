@@ -2347,42 +2347,20 @@ var Header = /*#__PURE__*/function (_Component) {
   _createClass(Header, [{
     key: "isLogin",
     value: function isLogin() {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-        className: "header",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-          className: "navbar navbar-light ",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-            className: "container-fluid",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("nav", {
-              className: "nav",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
-                className: "nav-link btn btn-primary m-lg-3",
-                href: "/",
-                children: "\u0414\u043E\u043C\u0430\u0448\u043D\u044F\u044F"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
-                className: "nav-link btn btn-primary m-lg-3",
-                href: "/",
-                children: "\u041E \u043D\u0430\u0441"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
-                className: "nav-link btn btn-primary m-lg-3",
-                href: "/",
-                children: "\u041F\u0430\u0440\u0442\u043D\u0435\u0440\u0438"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
-                className: "nav-link btn btn-primary m-lg-3",
-                href: "/vacancy",
-                children: "\u0412\u0430\u043A\u0430\u043D\u0441\u0438\u0438"
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
-                className: "nav-link btn btn-primary m-lg-3",
-                href: "/office",
-                children: "\u041B\u0438\u0447\u043D\u044B\u0439 \u043A\u0430\u0431\u0438\u043D\u0435\u0442"
-              })]
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-              className: "form",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Registr_Login__WEBPACK_IMPORTED_MODULE_3__.default, {})
-            })]
-          })
-        })
+      if (js_cookie__WEBPACK_IMPORTED_MODULE_4___default().get('role_id') === '3') {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+          className: "nav-link btn btn-primary m-lg-3",
+          href: "/office",
+          children: "\u041B\u0438\u0447\u043D\u044B\u0439 \u043A\u0430\u0431\u0438\u043D\u0435\u0442"
+        });
+      }
+
+      if (js_cookie__WEBPACK_IMPORTED_MODULE_4___default().get('role_id') === '2') return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
+        className: "nav-link btn btn-primary m-lg-3",
+        href: "/vacancy",
+        children: "\u0412\u0430\u043A\u0430\u043D\u0441\u0438\u0438"
       });
+      return "";
     }
   }, {
     key: "isLogOut",
@@ -2407,7 +2385,7 @@ var Header = /*#__PURE__*/function (_Component) {
                 className: "nav-link btn btn-primary m-lg-3",
                 href: "/",
                 children: "\u041F\u0430\u0440\u0442\u043D\u0435\u0440\u0438"
-              })]
+              }), this.isLogin()]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
               className: "form",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_Registr_Login__WEBPACK_IMPORTED_MODULE_3__.default, {})
@@ -2419,7 +2397,6 @@ var Header = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      if (js_cookie__WEBPACK_IMPORTED_MODULE_4___default().get('isLogin') === "1") return this.isLogin();
       return this.isLogOut();
     }
   }]);
@@ -2488,61 +2465,98 @@ var CreateTest = /*#__PURE__*/function (_Component) {
   _createClass(CreateTest, [{
     key: "render",
     value: function render() {
+      var _this2 = this;
+
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
         className: "row g-3 align-items-center pt-5",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
           className: "col-auto",
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
             type: "text",
-            id: "",
             className: "form-control",
-            placeholder: "Question"
+            name: "question",
+            value: this.props.mass.question[0],
+            onChange: function onChange(e) {
+              return _this2.props.update(_this2.props.countTest, e);
+            }
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
           className: "col-auto",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
             type: "text",
-            id: "",
+            name: "answers[0].answer",
             className: "form-control",
-            placeholder: "Answer"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+            value: this.props.mass.answers[0].answer[0],
+            onChange: function onChange(e) {
+              return _this2.props.update(_this2.props.countTest, e);
+            }
+          }, "1a"), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
             type: "text",
-            id: "",
+            name: "answers[1].answer",
             className: "form-control",
-            placeholder: "Answer"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+            value: this.props.mass.answers[1].answer[0],
+            onChange: function onChange(e) {
+              return _this2.props.update(_this2.props.countTest, e);
+            }
+          }, "2a"), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
             type: "text",
-            id: "",
+            name: "answers[2].answer",
             className: "form-control",
-            placeholder: "Answer"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+            value: this.props.mass.answers[2].answer[0],
+            onChange: function onChange(e) {
+              return _this2.props.update(_this2.props.countTest, e);
+            }
+          }, "3a"), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
             type: "text",
-            id: "",
+            name: "answers[3].answer",
             className: "form-control",
-            placeholder: "Answer"
-          })]
+            value: this.props.mass.answers[3].answer[0],
+            onChange: function onChange(e) {
+              return _this2.props.update(_this2.props.countTest, e);
+            }
+          }, "4a")]
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
           className: "col-auto",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
               className: "",
-              type: "checkbox"
-            })
+              name: "is_true",
+              type: "checkbox",
+              value: this.props.mass.answers[0].is_true,
+              onChange: function onChange(e) {
+                return _this2.props.update(_this2.props.countTest, e);
+              }
+            }, "1c")
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
               className: "",
-              type: "checkbox"
-            })
+              name: "is_true",
+              type: "checkbox",
+              value: this.props.mass.answers[1].is_true,
+              onChange: function onChange(e) {
+                return _this2.props.update(_this2.props.countTest, e);
+              }
+            }, "2c")
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
               className: "",
-              type: "checkbox"
-            })
+              name: "is_true",
+              type: "checkbox",
+              value: this.props.mass.answers[2].is_true,
+              onChange: function onChange(e) {
+                return _this2.props.update(_this2.props.countTest, e);
+              }
+            }, "3c")
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
               className: "",
-              type: "checkbox"
-            })
+              name: "is_true",
+              type: "checkbox",
+              value: this.props.mass.answers[3].is_true,
+              onChange: function onChange(e) {
+                return _this2.props.update(_this2.props.countTest, e);
+              }
+            }, "4c")
           })]
         })]
       });
@@ -2571,6 +2585,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _CreateTest__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CreateTest */ "./resources/js/components/Office/CreateTest.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -2609,19 +2641,64 @@ var CreateVacancy = /*#__PURE__*/function (_Component) {
 
     _this = _super.call(this, props);
     _this.state = {
-      countTest: 1,
-      components: []
+      components: [],
+      description: "",
+      countTest: 0,
+      mass: [],
+      quest: {
+        question: "",
+        answers: [{
+          answer: "",
+          is_true: 0
+        }, {
+          answer: "",
+          is_true: 0
+        }, {
+          answer: "",
+          is_true: 0
+        }, {
+          answer: "",
+          is_true: 0
+        }]
+      }
     };
     _this.plusComponent = _this.plusComponent.bind(_assertThisInitialized(_this));
+    _this.onChange = _this.onChange.bind(_assertThisInitialized(_this)); //this.state.mass.push(this.state.quest);
+    //this.state.components.push (<CreateTest countTest={this.state.countTest} update={this.onChange} mass={this.state.mass[this.state.countTest]}  />)
+
     return _this;
   } //===============================================================================
 
 
   _createClass(CreateVacancy, [{
+    key: "onChange",
+    value: function onChange(i, e) {
+      // console.log("onBlockChange i: "+ i);
+      //console.log((e.target.name+": "+ e.target.value))
+      var _e$target = e.target,
+          name = _e$target.name,
+          value = _e$target.value; // for(let i = 0; i < this.state.mass.length; i++)
+      //     console.log(this.state.mass[i])
+
+      var arr = this.state.mass;
+      var result = [].concat(_toConsumableArray(arr.slice(0, i)), [_objectSpread(_objectSpread({}, arr[i]), {}, _defineProperty({}, name, value))], _toConsumableArray(arr.slice(i + 1)));
+      this.setState({
+        mass: result
+      });
+      console.log("maaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasssssssssssssssssssssss");
+
+      for (var _i = 0; _i < this.state.mass.length; _i++) {
+        console.log(this.state.mass[_i]);
+      }
+    } //===============================================================================
+
+  }, {
     key: "forTests",
     value: function forTests() {
-      for (var i = 0; i < this.state.countTest; i++) {
-        this.state.components.push( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_CreateTest__WEBPACK_IMPORTED_MODULE_1__.default, {}));
+      console.log("maaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasssssssssssssssssssssss");
+
+      for (var i = 0; i < this.state.mass.length; i++) {
+        console.log(this.state.mass[i]);
       }
 
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
@@ -2643,8 +2720,19 @@ var CreateVacancy = /*#__PURE__*/function (_Component) {
     key: "plusComponent",
     value: function plusComponent() {
       this.setState({
-        countTest: 1
+        countTest: this.state.countTest + 1
       });
+      this.state.mass.push(this.state.quest);
+      this.state.components.push( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_CreateTest__WEBPACK_IMPORTED_MODULE_1__.default, {
+        countTest: this.state.countTest,
+        update: this.onChange,
+        mass: this.state.mass[this.state.countTest]
+      }));
+      console.log('+++++++++++++++++++++++++++++++++');
+
+      for (var i = 0; i < this.state.mass.length; i++) {
+        console.log(this.state.mass[i]);
+      }
     } //===============================================================================
 
   }, {
@@ -2670,6 +2758,20 @@ var CreateVacancy = /*#__PURE__*/function (_Component) {
       });
     } //===============================================================================
 
+  }, {
+    key: "handleChange",
+    value: function handleChange(event) {
+      setName(event.target.value);
+    }
+  }, {
+    key: "handleAdd",
+    value: function handleAdd() {
+      var newList = list.concat({
+        name: name
+      });
+      setList(newList);
+    } //===============================================================================
+
   }]);
 
   return CreateVacancy;
@@ -2692,7 +2794,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _CreateVacancy__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CreateVacancy */ "./resources/js/components/Office/CreateVacancy.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! js-cookie */ "./node_modules/js-cookie/src/js.cookie.js");
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2714,6 +2818,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
 
 
 
@@ -2751,10 +2856,19 @@ var PrivateOffice = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      // if(Cookies.get('isLogin')!=='1'){
-      //     window.location='/'
-      //     return ""
-      // }
+      console.log(js_cookie__WEBPACK_IMPORTED_MODULE_2___default().get('isLogin'));
+      console.log(js_cookie__WEBPACK_IMPORTED_MODULE_2___default().get('role_id'));
+
+      if (js_cookie__WEBPACK_IMPORTED_MODULE_2___default().get('isLogin') !== '1') {
+        window.location = '/';
+        return "";
+      }
+
+      if (js_cookie__WEBPACK_IMPORTED_MODULE_2___default().get('role_id') !== '3') {
+        window.location = '/';
+        return "";
+      }
+
       if (this.state.isTest === "2") return this.doVacForm();
       return this.renderOffice();
     } //===============================================================================
@@ -2762,9 +2876,10 @@ var PrivateOffice = /*#__PURE__*/function (_Component) {
   }, {
     key: "renderOffice",
     value: function renderOffice() {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+      console.log("Cooka isLogin: " + js_cookie__WEBPACK_IMPORTED_MODULE_2___default().get('isLogin'));
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+          children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
             type: "button",
             value: "CreateVacancy",
             className: "btn btn-primary",
@@ -2776,11 +2891,11 @@ var PrivateOffice = /*#__PURE__*/function (_Component) {
   }, {
     key: "doVacForm",
     value: function doVacForm() {
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("form", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_CreateVacancy__WEBPACK_IMPORTED_MODULE_1__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("form", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_CreateVacancy__WEBPACK_IMPORTED_MODULE_1__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
             className: "pt-5",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
               type: "button",
               value: "SaveVacancy",
               className: "btn btn-primary",
@@ -2888,6 +3003,7 @@ var Login = /*#__PURE__*/function (_Component) {
         console.log("Then response: ");
         console.log(response.data);
         js_cookie__WEBPACK_IMPORTED_MODULE_1___default().set('isLogin', "1");
+        js_cookie__WEBPACK_IMPORTED_MODULE_1___default().set('role_id', response.data.role_id);
         js_cookie__WEBPACK_IMPORTED_MODULE_1___default().set('name', response.data.name);
         js_cookie__WEBPACK_IMPORTED_MODULE_1___default().set('access_token', response.data.access_token);
 
@@ -2907,6 +3023,7 @@ var Login = /*#__PURE__*/function (_Component) {
     key: "doLogOut",
     value: function doLogOut(e) {
       js_cookie__WEBPACK_IMPORTED_MODULE_1___default().set('isLogin', "0");
+      js_cookie__WEBPACK_IMPORTED_MODULE_1___default().set('role_id', "");
       this.setState({
         isLogin: "1",
         password: ""
@@ -3061,7 +3178,8 @@ var RegistrForm = /*#__PURE__*/function (_Component) {
     _this.state = {
       name: "",
       email: "",
-      password: ""
+      password: "",
+      role_id: 999
     };
     _this.onChange = _this.onChange.bind(_assertThisInitialized(_this));
     _this.createUser = _this.createUser.bind(_assertThisInitialized(_this));
@@ -3072,8 +3190,10 @@ var RegistrForm = /*#__PURE__*/function (_Component) {
     key: "createUser",
     value: function createUser(e) {
       var toSend = JSON.stringify({
+        name: this.state.name,
         email: this.state.email,
-        password: this.state.password
+        password: this.state.password,
+        role_id: this.state.role_id
       });
       console.log(toSend);
       axios.post('/api/v1/users/add', toSend, {
@@ -3130,6 +3250,16 @@ var RegistrForm = /*#__PURE__*/function (_Component) {
               className: "form-control",
               name: "password",
               value: this.state.password,
+              onChange: this.onChange
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            className: "mb-3",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+              type: "text",
+              placeholder: "Role",
+              className: "form-control",
+              name: "role_id",
+              value: this.state.role_id,
               onChange: this.onChange
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
@@ -3573,10 +3703,17 @@ var All = /*#__PURE__*/function (_Component) {
       });
       if (this.state.items[0] === undefined) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         children: " undefined"
-      }); // if(Cookies.get('isLogin')!=='1'){
-      //     window.location='/'
-      //     return ""
-      // }
+      });
+
+      if (js_cookie__WEBPACK_IMPORTED_MODULE_2___default().get('isLogin') !== '1') {
+        window.location = '/';
+        return "";
+      }
+
+      if (js_cookie__WEBPACK_IMPORTED_MODULE_2___default().get('role_id') !== '2') {
+        window.location = '/';
+        return "";
+      }
 
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         children: this.state.items.map(function (item) {
@@ -3607,9 +3744,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Vacancy)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _VacancyItem__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./VacancyItem */ "./resources/js/components/Vacancy/VacancyItem.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! js-cookie */ "./node_modules/js-cookie/src/js.cookie.js");
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -3631,6 +3770,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
 
 
 
@@ -3691,31 +3831,38 @@ var Vacancy = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      if (!this.state.isLoaded) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      if (!this.state.isLoaded) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         children: " Loading "
       });
-      if (this.state.isErr) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      if (this.state.isErr) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         children: " IsError"
       });
-      if (this.state.vac[0] === undefined) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      if (this.state.vac[0] === undefined) return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         children: " undefined"
-      }); // if(Cookies.get('isLogin')!=='1'){
-      //     window.location='/'
-      //     return ""
-      // }
+      });
+
+      if (js_cookie__WEBPACK_IMPORTED_MODULE_2___default().get('isLogin') !== '1') {
+        window.location = '/';
+        return "";
+      }
+
+      if (js_cookie__WEBPACK_IMPORTED_MODULE_2___default().get('role_id') !== '2') {
+        window.location = '/';
+        return "";
+      }
 
       var v = this.state.vac[0];
-      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "container ",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
           className: "alert alert-dark",
           role: "alert",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
             children: [" ", v.description]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
             children: [" ", v.date]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.NavLink, {
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.NavLink, {
               to: "/test/".concat(v.idTest),
               className: "btn btn-info",
               children: "LinkToTest"

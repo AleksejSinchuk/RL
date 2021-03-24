@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {NavLink} from "react-router-dom";
 import VacancyItem from "./VacancyItem";
+import Cookies from "js-cookie";
 
 export default class Vacancy extends Component {
 
@@ -54,10 +55,8 @@ export default class Vacancy extends Component {
         if (!this.state.isLoaded) return (<div> Loading </div>);
         if (this.state.isErr) return (<div> IsError</div>);
         if (this.state.vac[0] === undefined) return (<div> undefined</div>);
-        // if(Cookies.get('isLogin')!=='1'){
-        //     window.location='/'
-        //     return ""
-        // }
+        if(Cookies.get('isLogin')!== '1') {window.location='/'; return "";}
+        if(Cookies.get('role_id')!== '2') {window.location='/'; return "";}
         let v = this.state.vac[0];
         return (
             <div className="container ">

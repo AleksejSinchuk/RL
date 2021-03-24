@@ -39,7 +39,7 @@ export default class Login extends Component {
                 console.log("Then response: ");
                 console.log(response.data);
                 Cookies.set('isLogin', "1");
-
+                Cookies.set('role_id', response.data.role_id);
                 Cookies.set('name', response.data.name);
                 Cookies.set('access_token', response.data.access_token);
                 this.setState({isLogin: "1"})
@@ -61,6 +61,7 @@ export default class Login extends Component {
     doLogOut(e) {
 
         Cookies.set('isLogin',"0")
+        Cookies.set('role_id',"")
         this.setState(
             {isLogin: "1",
                 password:""

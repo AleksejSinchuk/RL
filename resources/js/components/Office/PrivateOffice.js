@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import CreateVacancy from "./CreateVacancy";
+import Cookies from "js-cookie";
 
 
 
@@ -26,11 +27,10 @@ export default class PrivateOffice extends Component {
 //===============================================================================
 
     render() {
-
-        // if(Cookies.get('isLogin')!=='1'){
-        //     window.location='/'
-        //     return ""
-        // }
+        console.log(Cookies.get('isLogin'));
+        console.log(Cookies.get('role_id'));
+        if(Cookies.get('isLogin')!== '1') {window.location='/'; return "";}
+        if(Cookies.get('role_id')!== '3') {window.location='/'; return "";}
 
         if(this.state.isTest==="2")
             return this.doVacForm();
@@ -40,6 +40,7 @@ export default class PrivateOffice extends Component {
 //===============================================================================
 
     renderOffice(){
+        console.log( "Cooka isLogin: "+Cookies.get('isLogin'))
         return (
             <div>
 

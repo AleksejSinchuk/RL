@@ -50,10 +50,8 @@ export default class All extends Component {
         if (!this.state.isLoaded) return (<div> Loading </div>);
         if (this.state.isErr) return (<div> IsError</div>);
         if (this.state.items[0] === undefined) return (<div> undefined</div>);
-            // if(Cookies.get('isLogin')!=='1'){
-            //     window.location='/'
-            //     return ""
-            // }
+        if(Cookies.get('isLogin')!== '1') {window.location='/'; return "";}
+        if(Cookies.get('role_id')!== '2') {window.location='/'; return "";}
 
         return (
             <div >
