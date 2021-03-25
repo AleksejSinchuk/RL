@@ -33,15 +33,15 @@ class Header extends Component {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul  className="navbar-nav mr-auto">
                         <li className="nav-item">
-                            <a className="nav-link text-white" href="/">Home</a>
+                            <a className="nav-link text-white" href="/">Домашняя</a>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link text-white" href="/">Blog</a>
+                            <a className="nav-link text-white" href="/">Партнеры</a>
                         </li>
 
                         <li className="nav-item">
-                            <a className="nav-link text-white" href="/">Contact</a>
+                            <a className="nav-link text-white" href="/">О нас</a>
                         </li>
 
                         {this.isLogin()}

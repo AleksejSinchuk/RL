@@ -2410,21 +2410,21 @@ var Header = /*#__PURE__*/function (_Component) {
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
                   className: "nav-link text-white",
                   href: "/",
-                  children: "Home"
+                  children: "\u0414\u043E\u043C\u0430\u0448\u043D\u044F\u044F"
                 })
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
                 className: "nav-item",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
                   className: "nav-link text-white",
                   href: "/",
-                  children: "Blog"
+                  children: "\u041F\u0430\u0440\u0442\u043D\u0435\u0440\u044B"
                 })
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
                 className: "nav-item",
                 children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("a", {
                   className: "nav-link text-white",
                   href: "/",
-                  children: "Contact"
+                  children: "\u041E \u043D\u0430\u0441"
                 })
               }), this.isLogin()]
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
@@ -2814,7 +2814,7 @@ var CreateVacancy = /*#__PURE__*/function (_Component) {
             className: "container ",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
               "typeof": "text",
-              className: "form-control",
+              className: "form-control rounded-pill",
               name: "description",
               placeholder: "description"
             })
@@ -2824,14 +2824,14 @@ var CreateVacancy = /*#__PURE__*/function (_Component) {
             children: [this.countTests(), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
               type: "button",
               value: "CreateTestComponent",
-              className: "btn btn-primary mt-5",
+              className: "btn mt-5 bg-warning rounded-pill",
               onClick: this.plusComponent
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-              className: "pt-5",
+              className: "pt-5  text-right",
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
                 type: "button",
                 value: "SaveVacancy",
-                className: "btn btn-primary",
+                className: "btn bg-success rounded-pill",
                 onClick: this.saveVacancy
               })
             })]
@@ -2972,7 +2972,7 @@ var PrivateOffice = /*#__PURE__*/function (_Component) {
           children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
             type: "button",
             value: "CreateVacancy",
-            className: "btn btn-primary",
+            className: "btn btn-primary rounded-pill",
             onClick: this.getVacForm
           })]
         })
@@ -3123,22 +3123,15 @@ var Login = /*#__PURE__*/function (_Component) {
     key: "renderFormLogout",
     value: function renderFormLogout() {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("form", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("blockquote", {
-              className: "blockquote",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
-                children: js_cookie__WEBPACK_IMPORTED_MODULE_1___default().get('name')
-              })
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("form", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
               type: "button",
-              value: "Logout",
-              className: "btn btn-primary",
+              value: "\u0412\u044B\u0445\u043E\u0434",
+              className: "btn btn-primary rounded-pill ",
               onClick: this.doLogOut
             })
-          })]
+          })
         })
       });
     }
@@ -3153,8 +3146,8 @@ var Login = /*#__PURE__*/function (_Component) {
             className: "mb-3",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
               type: "email",
-              className: "form-control",
-              placeholder: "email",
+              className: "form-control rounded-pill bg-dark text-white ",
+              placeholder: "\u041F\u043E\u0447\u0442\u0430",
               name: "email",
               value: this.state.email,
               onChange: this.onChange
@@ -3163,8 +3156,8 @@ var Login = /*#__PURE__*/function (_Component) {
             className: "mb-3",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
               type: "password",
-              className: "form-control",
-              placeholder: "password",
+              className: "form-control rounded-pill bg-dark text-white",
+              placeholder: "\u041F\u0430\u0440\u043E\u043B\u044C",
               name: "password",
               value: this.state.password,
               onChange: this.onChange
@@ -3172,8 +3165,8 @@ var Login = /*#__PURE__*/function (_Component) {
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
             children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
               type: "button",
-              className: "btn btn-primary",
-              value: "Login",
+              className: "btn btn-primary rounded-pill",
+              value: "\u0412\u0445\u043E\u0434",
               onClick: this.doLogin
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", (_jsx2 = {
               className: "nav-link"
@@ -3296,15 +3289,15 @@ var RegistrForm = /*#__PURE__*/function (_Component) {
     key: "renderForm",
     value: function renderForm() {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        className: "container ",
+        className: "container pt-5",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("form", {
           className: "h-50",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
             className: "mb-3",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
               type: "text",
-              placeholder: "name",
-              className: "form-control",
+              placeholder: "\u0418\u043C\u044F",
+              className: "form-control rounded-pill bg-dark text-white",
               name: "name",
               value: this.state.name,
               onChange: this.onChange
@@ -3313,8 +3306,8 @@ var RegistrForm = /*#__PURE__*/function (_Component) {
             className: "mb-3",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
               type: "email",
-              placeholder: "email",
-              className: "form-control",
+              placeholder: "\u041F\u043E\u0447\u0442\u0430",
+              className: "form-control rounded-pill bg-dark text-white",
               name: "email",
               value: this.state.email,
               onChange: this.onChange
@@ -3323,8 +3316,8 @@ var RegistrForm = /*#__PURE__*/function (_Component) {
             className: "mb-3",
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
               type: "password",
-              placeholder: "password",
-              className: "form-control",
+              placeholder: "\u041F\u0430\u0440\u043E\u043B\u044C",
+              className: "form-control rounded-pill bg-dark text-white",
               name: "password",
               value: this.state.password,
               onChange: this.onChange
@@ -3334,15 +3327,15 @@ var RegistrForm = /*#__PURE__*/function (_Component) {
             children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
               type: "text",
               placeholder: "Role",
-              className: "form-control",
+              className: "form-control rounded-pill bg-dark text-white",
               name: "role_id",
               value: this.state.role_id,
               onChange: this.onChange
             })
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
             type: "button",
-            className: "btn btn-primary",
-            value: "Registration",
+            className: "btn btn-primary rounded-pill bg-dark text-white",
+            value: "\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044F",
             onClick: this.createUser
           })]
         })
@@ -3421,19 +3414,26 @@ var AnswerItem = /*#__PURE__*/function (_Component) {
     key: "render",
     value: function render() {
       {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("td", {
-            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-              children: this.props.answ.answer
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "col mt-3",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "row",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+              className: "col-1 align-content-center",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+                id: "myCheckbox2",
+                className: "form-check-input",
+                type: "checkbox",
+                value: this.props.answ.id
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+              className: "col-9",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+                id: "myInputAnsw",
+                children: this.props.answ.answer
+              })
             })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("td", {
-            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
-              className: "form-check-input",
-              type: "checkbox",
-              value: this.props.answ.id,
-              id: "answer" + this.props.answ.id
-            })]
-          })]
+          })
         }, "answ" + this.props.answ.id);
       }
     }
@@ -3503,16 +3503,13 @@ var QuestionItem = /*#__PURE__*/function (_Component) {
     value: function render() {
       {
         return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("td", {
-            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-              children: [" ", this.props.quest.question]
-            })]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("td", {
-            children: this.props.quest.answers.map(function (item) {
-              return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_AnswerItem__WEBPACK_IMPORTED_MODULE_1__.default, {
-                answ: item
-              });
-            })
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+            className: "row mt-5 text-center text-white bg-success rounded-pill",
+            children: [" ", this.props.quest.question]
+          }), this.props.quest.answers.map(function (item) {
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_AnswerItem__WEBPACK_IMPORTED_MODULE_1__.default, {
+              answ: item
+            });
           })]
         }, "quest" + this.props.quest.id);
       }
@@ -3645,26 +3642,26 @@ var Test = /*#__PURE__*/function (_Component) {
     value: function renderTestForm() {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
         className: "container",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("form", {
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-            children: this.state.test.name
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("table", {
-            className: "table table-dark border-0 border-bottom-0 border-top-0",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("tbody", {
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("tr", {
-                children: this.state.test.questions.map(function (item) {
-                  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_QuestionItem__WEBPACK_IMPORTED_MODULE_2__.default, {
-                    quest: item
-                  });
-                })
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          id: "myScroll",
+          className: "overflow-auto ",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("form", {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+              children: this.state.test.name
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+              className: "col",
+              children: this.state.test.questions.map(function (item) {
+                return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_QuestionItem__WEBPACK_IMPORTED_MODULE_2__.default, {
+                  quest: item
+                });
               })
-            })
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
-            type: "button",
-            value: "SendTest",
-            className: "btn btn-primary",
-            onClick: this.sendTest
-          })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+              type: "button",
+              value: "\u041E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C \u0442\u0435\u0441\u0442",
+              className: "btn btn-primary mt-5 rounded-pill",
+              onClick: this.sendTest
+            })]
+          })
         })
       });
     }
@@ -3930,21 +3927,42 @@ var Vacancy = /*#__PURE__*/function (_Component) {
 
       var v = this.state.vac[0];
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "container ",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-          className: "alert alert-dark",
-          role: "alert",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-            children: [" ", v.description]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-            children: [" ", v.date]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.NavLink, {
-              to: "/test/".concat(v.idTest),
-              className: "btn btn-info",
-              children: "LinkToTest"
-            })
-          })]
+        className: "container pt-5",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.NavLink, {
+          to: "/test/".concat(v.idTest),
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+            className: "alert alert-dark",
+            role: "alert",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+              className: " bg-light border-dark border-5 ",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+                className: " text-center h-auto border-dark border-5 p-4",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+                  className: "row",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                    className: "col-1",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("label", {
+                      children: "\u041E\u043F\u0438\u0441\u0430\u043D\u0438\u0435"
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+                    className: "col text-left",
+                    children: [" ", v.description, " "]
+                  })]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+                  className: "row pt-2",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                    className: "col-1",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("label", {
+                      children: "\u0414\u0430\u0442\u0430"
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+                    className: "col text-left",
+                    children: [" ", v.date, " "]
+                  })]
+                })]
+              })
+            }, v.id)
+          })
         })
       });
     }
@@ -4013,27 +4031,42 @@ var VacancyItem = /*#__PURE__*/function (_Component) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-        className: "container",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          className: "alert alert-dark",
-          role: "alert",
+        className: "container pt-5",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.NavLink, {
+          to: "/vacancy/".concat(this.props.vac.id),
           children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            className: " bg-light border-dark border-5 ",
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-              className: " text-center h-auto border-dark border-5 p-4",
-              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-                children: [" ", this.props.vac.description]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-                children: [" ", this.props.vac.date]
-              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.NavLink, {
-                  to: "/vacancy/".concat(this.props.vac.id),
-                  className: "btn btn-info",
-                  children: "LinkToVacancy"
-                })
-              })]
-            })
-          }, this.props.vac.id)
+            className: "alert alert-dark",
+            role: "alert",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: " bg-light border-dark border-5 ",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                className: " text-center h-auto border-dark border-5 p-4",
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                  className: "row",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                    className: "col-1",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("label", {
+                      children: "\u041E\u043F\u0438\u0441\u0430\u043D\u0438\u0435"
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                    className: "col text-left",
+                    children: [" ", this.props.vac.description, " "]
+                  })]
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                  className: "row pt-2",
+                  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+                    className: "col-1",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("label", {
+                      children: "\u0414\u0430\u0442\u0430"
+                    })
+                  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+                    className: "col text-left",
+                    children: [" ", this.props.vac.date, " "]
+                  })]
+                })]
+              })
+            }, this.props.vac.id)
+          })
         })
       });
     }
@@ -8609,7 +8642,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_img_back2_jpg__WEBPACK_IMPORTED_MODULE_2__.default);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n    font: 11pt Arial, Helvetica, sans-serif; /* Рубленый шрифт текста */\n    margin: 0; /* Отступы на странице */\n    height: 1250px;\n    /* background: #7f152e;*/\n\n }\n .header { /* Верхний блок */\n     /* Цвет фона */\n    padding: 10px; /* Поля вокруг текста */\n}\n.filter { /* Левая колонка */\n    float: left; /* Обтекание справа */\n    background: #edae01; /* Цвет фона */\n    border: 1px solid #333; /* Параметры рамки вокруг */\n    width: 20%; /* Ширина колонки */\n    padding: 5px; /* Поля вокруг текста */\n    margin: 10px 10px 20px 5px; /* Значения отступов */\n}\n\n.footer { /* Нижний блок */\n     /* Цвет фона */\n    padding: 5px; /* Поля вокруг текста */\n    color: #fff; /* Цвет текста */\n    clear: left; /* Отменяем действие float */\n}\n#backgr{\n    height: 1250px;\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") center no-repeat;\n    background-size: cover;\n}\n\n#nav a{\n    margin: 10px;\n    text-decoration: none;\n    opacity: .60;\n    transition: all 0.5s linear;\n    padding: 10px;\n    border-radius: 10px;\n    font-size: 20px;\n    color: white;\n}\n#nav a:hover{\n    opacity: 1;\n    box-shadow:  5px 5px 5px 5px black;\n}\n#myScroll{\n    height: 1000px;\n    padding-top: 30px;\n}\n#myCheckbox {\n    width:3vw;\n    height:3vw;\n    margin-top: 5px;\n}\n#myInput{\n    background: linear-gradient(#800000, #000000);\n    color: white;\n    padding: 5px 0 5px 10px;\n    border: 1px solid white;\n    border-radius: 20px;\n}\n#myInputAnsw{\n    background-color: #2e312c;\n\n    color: white;\n    padding: 5px 10px;\n    border-radius: 10px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n    font: 11pt Arial, Helvetica, sans-serif; /* Рубленый шрифт текста */\n    margin: 0; /* Отступы на странице */\n    height: 1250px;\n    /* background: #7f152e;*/\n\n }\n .header { /* Верхний блок */\n     /* Цвет фона */\n    padding: 10px; /* Поля вокруг текста */\n}\n.filter { /* Левая колонка */\n    float: left; /* Обтекание справа */\n    background: #edae01; /* Цвет фона */\n    border: 1px solid #333; /* Параметры рамки вокруг */\n    width: 20%; /* Ширина колонки */\n    padding: 5px; /* Поля вокруг текста */\n    margin: 10px 10px 20px 5px; /* Значения отступов */\n}\n\n.footer { /* Нижний блок */\n     /* Цвет фона */\n    padding: 5px; /* Поля вокруг текста */\n    color: #fff; /* Цвет текста */\n    clear: left; /* Отменяем действие float */\n}\n#backgr{\n    height: 1250px;\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") center no-repeat;\n    background-size: cover;\n}\n\n#nav a{\n    margin: 10px;\n    text-decoration: none;\n    opacity: .60;\n    transition: all 0.5s linear;\n    padding: 10px;\n    border-radius: 10px;\n    font-size: 20px;\n    color: white;\n}\n#nav a:hover{\n    opacity: 1;\n    box-shadow:  5px 5px 5px 5px black;\n}\n#myScroll{\n    height: 1000px;\n    padding-top: 30px;\n}\n#myCheckbox {\n    width:3vw;\n    height:3vw;\n    margin-top: 5px;\n}\n\n#myCheckbox2 {\n    width:2vw;\n    height:2vw;\n    margin-top: 5px;\n}\n#myInput{\n    background: linear-gradient(#800000, #000000);\n    color: white;\n    padding: 5px 0 5px 10px;\n    border: 1px solid white;\n    border-radius: 20px;\n}\n#myInputAnsw{\n    background-color: #2e312c;\n\n    color: white;\n    padding: 5px 10px;\n    border-radius: 10px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

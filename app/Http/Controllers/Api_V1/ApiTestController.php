@@ -35,21 +35,21 @@ class ApiTestController extends ApiControllers
     }
 
 
-    public function create(Request $data) {
-
-        try{
-            $test=new TestModel($data);
-            $test->save();
-            return $this->sendResponse(null,"Create successful",200);
-        }
+//    public function create() {
+//
 //        try{
-//            $data = $this->request->validated();
-//            $this->model->with('questions')->fill($data)->push();
+//            $test=new TestModel($data);
+//            $test->save();
 //            return $this->sendResponse(null,"Create successful",200);
 //        }
-        catch (Throwable $error) {
-            return $this->sendError('Not Found', 404);
-        }
-
-    }
+////        try{
+////            $data = $this->request->validated();
+////            $this->model->with('questions')->fill($data)->push();
+////            return $this->sendResponse(null,"Create successful",200);
+////        }
+//        catch (Throwable $error) {
+//            return $this->sendError('Not Found', 404);
+//        }
+//
+//    }
 }

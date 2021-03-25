@@ -86,12 +86,7 @@ export default class Login extends Component {
         return(
             <div>
                 <form>
-                   <div>
-                       <blockquote className="blockquote">
-                      <p>{Cookies.get('name')}</p>
-                       </blockquote>
-                   </div>
-                    <div><input type="button" value="Logout" className="btn btn-primary" onClick={this.doLogOut}/></div>
+                    <div><input type="button" value="Выход" className="btn btn-primary rounded-pill " onClick={this.doLogOut}/></div>
                 </form>
             </div>
         )
@@ -102,13 +97,13 @@ export default class Login extends Component {
             <div>
                 <form>
                     <div className="mb-3">
-                    <input type="email" className="form-control" placeholder="email" name="email" value={this.state.email} onChange={this.onChange}/>
+                    <input type="email" className="form-control rounded-pill bg-dark text-white " placeholder="Почта" name="email" value={this.state.email} onChange={this.onChange}/>
                     </div>
                     <div className="mb-3">
-                    <input type="password" className="form-control" placeholder="password" name="password" value={this.state.password} onChange={this.onChange}/>
+                    <input type="password" className="form-control rounded-pill bg-dark text-white" placeholder="Пароль" name="password" value={this.state.password} onChange={this.onChange}/>
                     </div>
                    <div>
-                       <input type="button" className="btn btn-primary" value="Login" onClick={this.doLogin}/>
+                       <input type="button" className="btn btn-primary rounded-pill" value="Вход" onClick={this.doLogin}/>
                        <a className="nav-link" className="p-lg-0 m-lg-5" href="/registr">Регистрация</a>
                    </div>
 

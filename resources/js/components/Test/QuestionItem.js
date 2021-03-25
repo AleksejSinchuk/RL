@@ -10,15 +10,15 @@ export default class QuestionItem extends Component {
 
         {
             return (
-                <div key={"quest"+this.props.quest.id}>
+                <div key={"quest"+this.props.quest.id} >
 
-                       <td> <div> {this.props.quest.question}</div></td>
-                    <td>
+                        <div className="row mt-5 text-center text-white bg-success rounded-pill"> {this.props.quest.question}</div>
+
                     { this.props.quest.answers.map(item => (
 
                        <AnswerItem answ={item}></AnswerItem>
                     ))}
-                    </td>
+
                 </div>);
         }
     }

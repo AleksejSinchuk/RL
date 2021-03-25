@@ -68,21 +68,19 @@ class Test extends Component {
 renderTestForm (){
     return(
         <div className="container">
+            <div id="myScroll" className="overflow-auto ">
             <form>
                 <div>{this.state.test.name}</div>
-                <table className="table table-dark border-0 border-bottom-0 border-top-0">
-                    <tbody>
-                    <tr>
+
+                <div className="col">
                         { this.state.test.questions.map(item => (
 
-                            <QuestionItem quest={item}></QuestionItem>
+                               <QuestionItem quest={item}></QuestionItem>
                         ))}
-                    </tr>
-                    </tbody>
-
-                </table>
-                <input type="button" value="SendTest" className="btn btn-primary" onClick={this.sendTest}/>
+                </div>
+                <input type="button" value="Отправить тест" className="btn btn-primary mt-5 rounded-pill" onClick={this.sendTest}/>
             </form>
+            </div>
         </div>
 
     )

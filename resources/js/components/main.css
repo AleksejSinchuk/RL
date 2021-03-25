@@ -53,6 +53,12 @@ body {
     height:3vw;
     margin-top: 5px;
 }
+
+#myCheckbox2 {
+    width:2vw;
+    height:2vw;
+    margin-top: 5px;
+}
 #myInput{
     background: linear-gradient(#800000, #000000);
     color: white;

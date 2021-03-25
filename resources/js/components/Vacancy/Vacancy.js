@@ -59,12 +59,27 @@ export default class Vacancy extends Component {
         if(Cookies.get('role_id')!== '2') {window.location='/'; return "";}
         let v = this.state.vac[0];
         return (
-            <div className="container ">
-                <div className="alert alert-dark" role="alert">
-                        <div> {v.description}</div>
-                        <div> {v.date}</div>
-                        <div ><NavLink to={`/test/${v.idTest}`} className="btn btn-info">LinkToTest</NavLink></div>
-                </div>
+            <div className="container pt-5">
+                <NavLink to={`/test/${v.idTest}`}>
+                    <div className="alert alert-dark" role="alert">
+                        <div key={v.id} className=" bg-light border-dark border-5 ">
+                            <div className=" text-center h-auto border-dark border-5 p-4">
+                                <div className="row">
+                                    <div className="col-1">
+                                        <label>Описание</label>
+                                    </div>
+                                    <div className="col text-left"> {v.description} </div>
+                                </div>
+                                <div className="row pt-2">
+                                    <div className="col-1">
+                                        <label>Дата</label>
+                                    </div>
+                                    <div className="col text-left"> {v.date} </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </NavLink>
             </div>);
     }
 

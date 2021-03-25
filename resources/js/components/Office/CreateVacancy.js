@@ -103,17 +103,17 @@ countTests(){
 
                         <form>
                             <div className='container '>
-                       <input typeof="text" className="form-control" name="description" placeholder="description"/>
+                       <input typeof="text" className="form-control rounded-pill" name="description" placeholder="description"/>
                        </div>
                             <div id="myScroll" className="overflow-auto ">
                        {this.countTests()}
 
 
-                       <input type="button" value="CreateTestComponent" className="btn btn-primary mt-5" onClick={this.plusComponent}/>
+                       <input type="button" value="CreateTestComponent" className="btn mt-5 bg-warning rounded-pill" onClick={this.plusComponent}/>
 
 
-                            <div className="pt-5">
-                                <input type="button" value="SaveVacancy" className="btn btn-primary" onClick={this.saveVacancy}/>
+                            <div className="pt-5  text-right">
+                                <input type="button"   value="SaveVacancy" className="btn bg-success rounded-pill" onClick={this.saveVacancy}/>
                             </div>
                        </div>
                    </form>

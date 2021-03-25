@@ -59,21 +59,21 @@ export default class RegistrForm extends Component {
 
     renderForm() {
         return (
-            <div className="container ">
+            <div className="container pt-5">
                 <form className="h-50">
                     <div className="mb-3">
-                    <input type="text" placeholder="name" className="form-control" name="name" value={this.state.name} onChange={this.onChange}/>
+                    <input type="text" placeholder="Имя" className="form-control rounded-pill bg-dark text-white" name="name" value={this.state.name} onChange={this.onChange}/>
                     </div>
                     <div className="mb-3">
-                    <input type="email" placeholder="email" className="form-control" name="email" value={this.state.email} onChange={this.onChange}/>
+                    <input type="email" placeholder="Почта" className="form-control rounded-pill bg-dark text-white" name="email" value={this.state.email} onChange={this.onChange}/>
                     </div>
                     <div className="mb-3">
-                    <input type="password" placeholder="password" className="form-control" name="password" value={this.state.password} onChange={this.onChange}/>
+                    <input type="password" placeholder="Пароль" className="form-control rounded-pill bg-dark text-white" name="password" value={this.state.password} onChange={this.onChange}/>
                     </div>
                     <div className="mb-3">
-                        <input type="text" placeholder="Role" className="form-control" name="role_id" value={this.state.role_id} onChange={this.onChange}/>
+                        <input type="text" placeholder="Role" className="form-control rounded-pill bg-dark text-white" name="role_id" value={this.state.role_id} onChange={this.onChange}/>
                     </div>
-                    <input type="button" className="btn btn-primary" value="Registration" onClick={this.createUser}/>
+                    <input type="button" className="btn btn-primary rounded-pill bg-dark text-white" value="Регистрация" onClick={this.createUser}/>
                 </form>
             </div>
 
