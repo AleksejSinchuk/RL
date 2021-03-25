@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 use Laravel\Passport\Passport;
 
 
@@ -18,7 +19,7 @@ class ApiUserController extends Controller
             $users=new User();
             $users->email=$data['email'];
             $users->password=Hash::make($data['password']);
-            $users->remember_token=Passport::hashClientSecrets();
+            $users->remember_token=Str::random(60);
             $users->name=$data['name'];
             $users->role_id=$data['role_id'];
             $users->updated_at=DB::raw(NOW());

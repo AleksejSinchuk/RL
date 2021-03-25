@@ -29,7 +29,8 @@ export default class RegistrForm extends Component {
         console.log(toSend);
 
         axios.post(
-            '/api/v1/users/add',
+             '/api/v1/users/add',
+
             toSend,
             {
                 headers:{

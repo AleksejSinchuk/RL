@@ -21,6 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::prefix('/auth')->group( function(){
     Route::post('/login', [\App\Http\Controllers\Api_V1\Auth\AuthController::class, 'login']);
     Route::get('/postUser/{access_token}', [\App\Http\Controllers\Api_V1\Auth\AuthController::class, 'postUser']);
+    Route::post('/registr', [\App\Http\Controllers\Api_V1\Auth\AuthController::class, 'register']);
 });
 
 

@@ -4,8 +4,11 @@ namespace App\Http\Controllers\Api_V1\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class AuthController extends Controller
 {
@@ -36,5 +39,23 @@ class AuthController extends Controller
         //return response(['status'=> true, 'user' => Auth::user()], 200);
     }
 
+
+    public function register (Request $request) {
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:6|confirmed',
+        ]);
+        if ($validator->fails())
+        {
+            return response(['errors'=>$validator->errors()->all()], 422);
+        }
+        $request['password']=Hash::make($request['password']);
+        $request['remember_token'] = Str::random(40);
+        $user = User::create($request->toArray());
+        $token = $user->createToken('Laravel Password Grant Client')->accessToken;
+        $response = ['token' => $token];
+        return response($response, 200);
+    }
 
 }
