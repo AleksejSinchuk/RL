@@ -6,6 +6,7 @@ export default class CreateVacancy extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            town:"",
             components:[],
             description: "",
             countTest: 0,
@@ -23,8 +24,7 @@ export default class CreateVacancy extends Component {
         }
         this.plusComponent=this.plusComponent.bind(this);
         this.onChange=this.onChange.bind(this);
-        //this.state.mass.push(this.state.quest);
-        //this.state.components.push (<CreateTest countTest={this.state.countTest} update={this.onChange} mass={this.state.mass[this.state.countTest]}  />)
+        this.saveVacancy=this.saveVacancy.bind(this);
 
     }
 
@@ -34,8 +34,8 @@ export default class CreateVacancy extends Component {
 
 
      onChange(i,e){
-        // console.log("onBlockChange i: "+ i);
-         //console.log((e.target.name+": "+ e.target.value))
+         console.log("onBlockChange i: "+ i);
+         console.log((e.target.name+": "+ e.target.value))
          const {name, value} = e.target;
 
          // for(let i = 0; i < this.state.mass.length; i++)
@@ -50,17 +50,12 @@ export default class CreateVacancy extends Component {
 
          this.setState({mass: result});
 
-         console.log("maaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasssssssssssssssssssssss")
-         for(let i = 0; i <this.state.mass.length; i++)
-             console.log(this.state.mass[i])
      }
 
 
 //===============================================================================
 forTests(){
-    console.log("maaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasssssssssssssssssssssss")
-    for(let i = 0; i <this.state.mass.length; i++)
-        console.log(this.state.mass[i])
+
     return(
        <div>
            {this.state.components.map(comp => comp)}
@@ -104,17 +99,23 @@ countTests(){
 
     render() {
        return(
-               <div>
+               <div >
 
                         <form>
-                            <div className='container'>
+                            <div className='container '>
                        <input typeof="text" className="form-control" name="description" placeholder="description"/>
                        </div>
+                            <div id="myScroll" className="overflow-auto ">
                        {this.countTests()}
 
 
                        <input type="button" value="CreateTestComponent" className="btn btn-primary mt-5" onClick={this.plusComponent}/>
 
+
+                            <div className="pt-5">
+                                <input type="button" value="SaveVacancy" className="btn btn-primary" onClick={this.saveVacancy}/>
+                            </div>
+                       </div>
                    </form>
                </div>
            ) ;
@@ -124,15 +125,35 @@ countTests(){
 
     //===============================================================================
 
-         handleChange(event) {
-             setName(event.target.value);
-         }
-         handleAdd() {
-             const newList = list.concat({ name });
+saveVacancy(e){
+    let toSendTest = JSON.stringify({
+        name: "TestForTest",
+        data: this.state.mass,
 
-             setList(newList);
+    });
+    console.log(toSendTest);
+
+    axios.post(
+        '/api/v1/test/add',
+        toSendTest,
+        {
+            headers:{
+                'Content-Type': 'application/json'
+            }
         }
+    )
+        .then(response=> {
+            console.log("Then response: ");
+            console.log(response.data);
+            window.location='/';
+        })
+        .catch(error=> {
+            console.log("Catch Error: ");
+            console.log(error);
+        });
 
+    e.preventDefault();
+}
 
 
 

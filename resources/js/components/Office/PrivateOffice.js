@@ -13,7 +13,6 @@ export default class PrivateOffice extends Component {
         }
 
         this.getVacForm=this.getVacForm.bind(this);
-        this.saveVacancy=this.saveVacancy.bind(this);
     }
 
 //===============================================================================
@@ -56,9 +55,7 @@ export default class PrivateOffice extends Component {
             <div>
                 <form>
                     <CreateVacancy />
-                    <div className="pt-5">
-                        <input type="button" value="SaveVacancy" className="btn btn-primary" onClick={this.saveVacancy}/>
-                    </div>
+
 
                 </form>
 
@@ -66,8 +63,5 @@ export default class PrivateOffice extends Component {
         );
     }
 
-    saveVacancy(){
-        console.log("saveVacancyButton")
-    }
 
 }

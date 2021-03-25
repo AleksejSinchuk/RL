@@ -19,9 +19,10 @@ import PrivateOffice from "./Office/PrivateOffice";
 export default class Main extends Component {
     render() {
         return (
-            <div>
-            <Header></Header>
-                <div className="content main h-100">
+            <div id="backgr" >
+                <div className="col"> <Header></Header></div>
+
+                <div  className="content main col ">
                     <Router>
                         <Switch>
                             <Route exact path="/" component={Welcome}></Route>
@@ -36,7 +37,8 @@ export default class Main extends Component {
                         </Switch>
                     </Router>
                 </div>
-            <Footer></Footer>
+                <div className="col"><Footer></Footer></div>
+
             </div>
         );
     }

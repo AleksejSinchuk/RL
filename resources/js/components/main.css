@@ -1,11 +1,12 @@
 body {
     font: 11pt Arial, Helvetica, sans-serif; /* Рубленый шрифт текста */
     margin: 0; /* Отступы на странице */
+    height: 1250px;
     /* background: #7f152e;*/
 
  }
  .header { /* Верхний блок */
-    background: #d61800; /* Цвет фона */
+     /* Цвет фона */
     padding: 10px; /* Поля вокруг текста */
 }
 .filter { /* Левая колонка */
@@ -16,14 +17,33 @@ body {
     padding: 5px; /* Поля вокруг текста */
     margin: 10px 10px 20px 5px; /* Значения отступов */
 }
-.content { /* Правая колонка */
-    background: #e94f08; /* Цвет фона */
-    padding: 5px; /* Поля вокруг текста */
-    border: 1px solid #333; /* Параметры рамки */
-}
+
 .footer { /* Нижний блок */
-    background: #d61800; /* Цвет фона */
+     /* Цвет фона */
     padding: 5px; /* Поля вокруг текста */
     color: #fff; /* Цвет текста */
     clear: left; /* Отменяем действие float */
+}
+#backgr{
+    height: 1250px;
+    background: url("img/back2.jpg") center no-repeat;
+    background-size: cover;
+}
+
+#nav a{
+    margin: 10px;
+    text-decoration: none;
+    opacity: .60;
+    transition: all 0.5s linear;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+}
+#nav a:hover{
+    opacity: 1;
+    box-shadow:  5px 5px 5px 5px black;
+}
+#myScroll{
+    height: 1000px;
 }

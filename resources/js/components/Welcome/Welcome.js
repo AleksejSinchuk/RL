@@ -8,9 +8,8 @@ import Img from "./img1.jpg"
 class Welcome extends Component {
     render() {
         return (
-            <div className="text-center">
-               <h1 className="align-content-center">Не остонавливайся на достигнутом!</h1>
-                <img className="img-fluid max-width: 100%" src={Img}/>
+            <div className="text-center container pt-5 ">
+               <h1 className="align-content-center pt-5" >Мы - правильный путь к карьерной вершине</h1>
             </div>
         );
     }

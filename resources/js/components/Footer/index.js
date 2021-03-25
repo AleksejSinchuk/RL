@@ -6,8 +6,8 @@ class Footer extends Component {
     render() {
         return (
 
-            <div className="footer" >
-                <nav className="nav">
+            <div className="footer fixed-bottom" >
+                <nav className="nav ">
                     <a className="nav-link" href="/">О нас</a>
                     <a className="nav-link" href="/">Партнеры</a>
                 </nav>
