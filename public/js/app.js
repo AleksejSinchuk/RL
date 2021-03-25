@@ -2512,95 +2512,131 @@ var CreateTest = /*#__PURE__*/function (_Component) {
       var _this2 = this;
 
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "row g-3 align-items-center pt-5",
+        className: "col pt-5",
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          className: "col-auto",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-            type: "text",
-            className: "form-control",
-            name: "question",
-            value: this.props.mass.question[0],
-            onChange: function onChange(e) {
-              return _this2.props.update(_this2.props.countTest, e);
-            }
+          className: "col",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+            className: "row",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+              type: "text",
+              id: "myInput",
+              className: "form-control ",
+              name: "question",
+              value: this.props.mass.question[0],
+              onChange: function onChange(e) {
+                return _this2.props.update(_this2.props.countTest, e);
+              }
+            })
           })
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "col-auto",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-            type: "text",
-            name: "answers[0].answer",
-            className: "form-control",
-            value: this.props.mass.answers[0].answer[0],
-            onChange: function onChange(e) {
-              return _this2.props.update(_this2.props.countTest, e);
-            }
-          }, "1a"), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-            type: "text",
-            name: "answers[1].answer",
-            className: "form-control",
-            value: this.props.mass.answers[1].answer[0],
-            onChange: function onChange(e) {
-              return _this2.props.update(_this2.props.countTest, e);
-            }
-          }, "2a"), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-            type: "text",
-            name: "answers[2].answer",
-            className: "form-control",
-            value: this.props.mass.answers[2].answer[0],
-            onChange: function onChange(e) {
-              return _this2.props.update(_this2.props.countTest, e);
-            }
-          }, "3a"), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-            type: "text",
-            name: "answers[3].answer",
-            className: "form-control",
-            value: this.props.mass.answers[3].answer[0],
-            onChange: function onChange(e) {
-              return _this2.props.update(_this2.props.countTest, e);
-            }
-          }, "4a")]
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "col-auto",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-              className: "",
-              name: "is_true",
-              type: "checkbox",
-              value: this.props.mass.answers[0].is_true,
-              onChange: function onChange(e) {
-                return _this2.props.update(_this2.props.countTest, e);
-              }
-            }, "1c")
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-              className: "",
-              name: "is_true",
-              type: "checkbox",
-              value: this.props.mass.answers[1].is_true,
-              onChange: function onChange(e) {
-                return _this2.props.update(_this2.props.countTest, e);
-              }
-            }, "2c")
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-              className: "",
-              name: "is_true",
-              type: "checkbox",
-              value: this.props.mass.answers[2].is_true,
-              onChange: function onChange(e) {
-                return _this2.props.update(_this2.props.countTest, e);
-              }
-            }, "3c")
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-              className: "",
-              name: "is_true",
-              type: "checkbox",
-              value: this.props.mass.answers[3].is_true,
-              onChange: function onChange(e) {
-                return _this2.props.update(_this2.props.countTest, e);
-              }
-            }, "4c")
+          className: "col pt-5 w-75",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            className: "row ",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "col-1 align-content-center",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+                id: "myCheckbox",
+                name: "is_true",
+                type: "checkbox",
+                value: this.props.mass.answers[0].is_true,
+                onChange: function onChange(e) {
+                  return _this2.props.update(_this2.props.countTest, e);
+                }
+              }, "1c")
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "col-9",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+                id: "myInputAnsw",
+                type: "text",
+                name: "answers[0].answer",
+                className: "form-control",
+                value: this.props.mass.answers[0].answer[0],
+                onChange: function onChange(e) {
+                  return _this2.props.update(_this2.props.countTest, e);
+                }
+              }, "1a")
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            className: "row",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "col-1 align-content-center",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+                id: "myCheckbox",
+                className: "",
+                name: "is_true",
+                type: "checkbox",
+                value: this.props.mass.answers[0].is_true,
+                onChange: function onChange(e) {
+                  return _this2.props.update(_this2.props.countTest, e);
+                }
+              }, "1c")
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "col-9",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+                id: "myInputAnsw",
+                type: "text",
+                name: "answers[1].answer",
+                className: "form-control",
+                value: this.props.mass.answers[1].answer[0],
+                onChange: function onChange(e) {
+                  return _this2.props.update(_this2.props.countTest, e);
+                }
+              }, "2a")
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            className: "row",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "col-1 align-content-center",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+                id: "myCheckbox",
+                className: "",
+                name: "is_true",
+                type: "checkbox",
+                value: this.props.mass.answers[2].is_true,
+                onChange: function onChange(e) {
+                  return _this2.props.update(_this2.props.countTest, e);
+                }
+              }, "3c")
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "col-9",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+                id: "myInputAnsw",
+                type: "text",
+                name: "answers[2].answer",
+                className: "form-control",
+                value: this.props.mass.answers[2].answer[0],
+                onChange: function onChange(e) {
+                  return _this2.props.update(_this2.props.countTest, e);
+                }
+              }, "3a")
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+            className: "row",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "col-1 align-content-center",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+                id: "myCheckbox",
+                className: "",
+                name: "is_true",
+                type: "checkbox",
+                value: this.props.mass.answers[3].is_true,
+                onChange: function onChange(e) {
+                  return _this2.props.update(_this2.props.countTest, e);
+                }
+              }, "4c")
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+              className: "col-9",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+                id: "myInputAnsw",
+                type: "text",
+                name: "answers[3].answer",
+                className: "form-control",
+                value: this.props.mass.answers[3].answer[0],
+                onChange: function onChange(e) {
+                  return _this2.props.update(_this2.props.countTest, e);
+                }
+              }, "4a")
+            })]
           })]
         })]
       });
@@ -2772,6 +2808,7 @@ var CreateVacancy = /*#__PURE__*/function (_Component) {
     key: "render",
     value: function render() {
       return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        className: "container ",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("form", {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
             className: "container ",
@@ -8572,7 +8609,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_img_back2_jpg__WEBPACK_IMPORTED_MODULE_2__.default);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n    font: 11pt Arial, Helvetica, sans-serif; /* Рубленый шрифт текста */\n    margin: 0; /* Отступы на странице */\n    height: 1250px;\n    /* background: #7f152e;*/\n\n }\n .header { /* Верхний блок */\n     /* Цвет фона */\n    padding: 10px; /* Поля вокруг текста */\n}\n.filter { /* Левая колонка */\n    float: left; /* Обтекание справа */\n    background: #edae01; /* Цвет фона */\n    border: 1px solid #333; /* Параметры рамки вокруг */\n    width: 20%; /* Ширина колонки */\n    padding: 5px; /* Поля вокруг текста */\n    margin: 10px 10px 20px 5px; /* Значения отступов */\n}\n\n.footer { /* Нижний блок */\n     /* Цвет фона */\n    padding: 5px; /* Поля вокруг текста */\n    color: #fff; /* Цвет текста */\n    clear: left; /* Отменяем действие float */\n}\n#backgr{\n    height: 1250px;\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") center no-repeat;\n    background-size: cover;\n}\n\n#nav a{\n    margin: 10px;\n    text-decoration: none;\n    opacity: .60;\n    transition: all 0.5s linear;\n    padding: 10px;\n    border-radius: 10px;\n    font-size: 20px;\n    color: white;\n}\n#nav a:hover{\n    opacity: 1;\n    box-shadow:  5px 5px 5px 5px black;\n}\n#myScroll{\n    height: 1000px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n    font: 11pt Arial, Helvetica, sans-serif; /* Рубленый шрифт текста */\n    margin: 0; /* Отступы на странице */\n    height: 1250px;\n    /* background: #7f152e;*/\n\n }\n .header { /* Верхний блок */\n     /* Цвет фона */\n    padding: 10px; /* Поля вокруг текста */\n}\n.filter { /* Левая колонка */\n    float: left; /* Обтекание справа */\n    background: #edae01; /* Цвет фона */\n    border: 1px solid #333; /* Параметры рамки вокруг */\n    width: 20%; /* Ширина колонки */\n    padding: 5px; /* Поля вокруг текста */\n    margin: 10px 10px 20px 5px; /* Значения отступов */\n}\n\n.footer { /* Нижний блок */\n     /* Цвет фона */\n    padding: 5px; /* Поля вокруг текста */\n    color: #fff; /* Цвет текста */\n    clear: left; /* Отменяем действие float */\n}\n#backgr{\n    height: 1250px;\n    background: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ") center no-repeat;\n    background-size: cover;\n}\n\n#nav a{\n    margin: 10px;\n    text-decoration: none;\n    opacity: .60;\n    transition: all 0.5s linear;\n    padding: 10px;\n    border-radius: 10px;\n    font-size: 20px;\n    color: white;\n}\n#nav a:hover{\n    opacity: 1;\n    box-shadow:  5px 5px 5px 5px black;\n}\n#myScroll{\n    height: 1000px;\n    padding-top: 30px;\n}\n#myCheckbox {\n    width:3vw;\n    height:3vw;\n    margin-top: 5px;\n}\n#myInput{\n    background: linear-gradient(#800000, #000000);\n    color: white;\n    padding: 5px 0 5px 10px;\n    border: 1px solid white;\n    border-radius: 20px;\n}\n#myInputAnsw{\n    background-color: #2e312c;\n\n    color: white;\n    padding: 5px 10px;\n    border-radius: 10px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

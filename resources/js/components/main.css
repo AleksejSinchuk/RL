@@ -46,4 +46,24 @@ body {
 }
 #myScroll{
     height: 1000px;
+    padding-top: 30px;
+}
+#myCheckbox {
+    width:3vw;
+    height:3vw;
+    margin-top: 5px;
+}
+#myInput{
+    background: linear-gradient(#800000, #000000);
+    color: white;
+    padding: 5px 0 5px 10px;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+#myInputAnsw{
+    background-color: #2e312c;
+
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
 }
