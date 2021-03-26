@@ -129,6 +129,17 @@ saveVacancy(e){
     let toSendTest = JSON.stringify({
         name: "TestForTest",
         data: this.state.mass,
+       //  data:{
+       //      name:'TEEEEEST',
+       //      questions:{
+       //          question:"QQQQQQQ11111",
+       //          answers:{
+       //              answer:"1111111",
+       //              is_true: 1
+       //          }
+       //      }
+       //  }
+
 
     });
     console.log(toSendTest);
@@ -145,7 +156,7 @@ saveVacancy(e){
         .then(response=> {
             console.log("Then response: ");
             console.log(response.data);
-            window.location='/';
+            // window.location='/';
         })
         .catch(error=> {
             console.log("Catch Error: ");
